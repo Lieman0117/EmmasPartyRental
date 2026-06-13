@@ -1,0 +1,10 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<!-- cornhole board -->
+	<path d="M6 42 14 14H42L34 42Z" fill="#fff"/>
+	<circle cx="26" cy="22" r="4.5" fill="#d6336c"/>
+	<!-- legs -->
+	<rect x="9" y="42" width="3" height="6" rx="1" fill="#fff"/>
+	<rect x="34" y="42" width="3" height="6" rx="1" fill="#fff"/>
+	<!-- bean bag -->
+	<circle cx="43" cy="9" r="5.5" fill="#fff"/>
+</svg>
