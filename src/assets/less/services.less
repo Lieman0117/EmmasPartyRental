@@ -94,8 +94,40 @@
         .cs-item-text {
             font-size: (16/16rem);
             line-height: 1.5em;
-            margin: 0;
+            margin: 0 0 (16/16rem);
             color: var(--bodyTextColor);
+        }
+
+        .cs-feature-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: (8/16rem);
+
+            li {
+                list-style: none;
+                font-size: (15/16rem);
+                line-height: 1.5em;
+                color: var(--bodyTextColor);
+                padding-left: (28/16rem);
+                position: relative;
+
+                &:before {
+                    content: "";
+                    width: (18/16rem);
+                    height: (18/16rem);
+                    position: absolute;
+                    left: 0;
+                    top: 0.15em;
+                    border-radius: 50%;
+                    background-color: var(--primary);
+                    background-image: url("/assets/svgs/check.svg");
+                    background-size: (9/16rem);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
         }
     }
 }
