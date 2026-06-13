@@ -16,46 +16,28 @@
         text-align: center;
         /* 144px - 300px - leaving extra space for the navigation */
         padding: clamp(9rem, 25.95vw, 18.75rem) (16/16rem) 0;
-        /* 130px - 450px */
-        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+        /* 96px - 180px */
+        padding-bottom: clamp(6rem, 16vw, 11.25rem);
         position: relative;
         z-index: 1;
-        /* Prevents white rectangle pseudos from overlapping the sections below */
+        /* Prevents the scalloped edge from overlapping the sections below */
         overflow: hidden;
 
-        &:before {
-            /* Left side of the triangle */
-            content: "";
-            width: (500/16rem);
-            /* make really long so it covers the whole screen all the way to desktop */
-            height: (4000/16rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(-67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: (-2235/16rem);
-            /* this makes the right edge sit at the 50% line at all times */
-            right: 50%;
-            z-index: 0;
-        }
-
         &:after {
-            /* Right side of the triangle */
+            /* Scalloped party-banner edge */
             content: "";
-            width: (500/16rem);
-            height: (4000/16rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(67deg);
-            transform-origin: center;
+            width: 100%;
+            /* 28px - 48px */
+            height: clamp(1.75rem, 4vw, 3rem);
+            background-image: radial-gradient(circle at 10px 0, transparent 12px, var(--cream) 12.5px);
+            background-size: 40px 24px;
+            background-repeat: repeat-x;
+            background-position: bottom;
             position: absolute;
             display: block;
-            bottom: (-2235/16rem);
-            /* this makes the left edge sit at the 50% line at all times */
-            left: 50%;
-            z-index: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
         }
 
         .cs-background {
@@ -68,12 +50,12 @@
             z-index: -2;
 
             &:before {
-                /* Overlay */
+                /* Pink-to-gold gradient overlay for a festive tone */
                 content: "";
                 width: 100%;
                 height: 100%;
-                background: #000;
-                opacity: 0.7;
+                background: linear-gradient(160deg, rgba(214, 51, 108, 0.78) 0%, rgba(43, 34, 34, 0.55) 60%, rgba(224, 165, 38, 0.55) 100%);
+                opacity: 1;
                 position: absolute;
                 display: block;
                 top: 0;
@@ -97,12 +79,21 @@
             width: 100%;
             max-width: (1280/16rem);
             margin: auto;
+            position: relative;
+            z-index: 3;
+        }
+
+        .cs-topper {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            color: var(--secondaryLight);
         }
 
         .cs-title {
             /* 39px - 61px */
             font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-            font-weight: 700;
+            font-weight: 900;
             line-height: 1.2em;
             text-align: center;
             max-width: (829/16rem);
@@ -120,7 +111,8 @@
                 height: clamp(0.25rem, 0.8vw, 0.5rem);
                 /* 16px - 24px */
                 margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
-                background: var(--primary);
+                background: var(--secondary);
+                border-radius: (4/16rem);
                 opacity: 1;
                 position: relative;
                 display: block;
@@ -139,6 +131,10 @@
             /* 40px - 48px */
             margin-bottom: clamp(2.5rem, 4vw, 3rem);
             color: #fff;
+        }
+
+        .cs-button-solid {
+            margin: 0 (8/16rem) (16/16rem);
         }
     }
 }

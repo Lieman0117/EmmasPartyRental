@@ -13,13 +13,14 @@
 @media only screen and (min-width: 0px) {
 	/* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
 	:root {
-		--primary: #c2185b;
-		--primaryLight: #ff6fae;
-		--secondary: #cda344;
-		--secondaryLight: #e0c171;
+		--primary: #d6336c;
+		--primaryLight: #ff8fb6;
+		--secondary: #e0a526;
+		--secondaryLight: #f6d27a;
+		--cream: #fff8ec;
 		--headerColor: #2b2222;
 		--bodyTextColor: #5c5552;
-		--bodyTextColorWhite: #fdf6ec;
+		--bodyTextColorWhite: #fff8ec;
 
 		/* 13px - 16px */
 		--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -28,6 +29,10 @@
 		--bodyFontSize: 1rem;
 		/* 60px - 100px top and bottom */
 		--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+		/* pill-shaped buttons, rounded cards */
+		--pillRadius: 100px;
+		--cardRadius: 1.25rem;
 
 		--headerFont: "Roboto", Arial, sans-serif;
 		--bodyFont: "Roboto", Arial, sans-serif;
@@ -41,7 +46,7 @@
 		font-family: var(--bodyFont);
 		font-size: 100%;
 color: var(--bodyTextColor);
-		background-color: #fdf6ec;
+		background-color: var(--cream);
 	}
 
 	*,
@@ -98,50 +103,33 @@ color: var(--bodyTextColor);
 		opacity: 0;
 	}
 
-	// Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
+	// Buttons - pill-shaped with a gold-to-pink gradient fill on hover
 	.cs-button-solid {
 		z-index: 1;
 		position: relative;
 		display: inline-block;
-		background-color: var(--primary);
+		background: linear-gradient(135deg, var(--primary), var(--primaryLight));
 		width: auto;
-		padding: (16/16rem) (32/16rem);
+		/* generous touch target */
+		padding: (18/16rem) (40/16rem);
 		text-decoration: none;
 		text-transform: uppercase;
+		letter-spacing: 0.04em;
 		font-size: (16/16rem);
 		line-height: (16/16em);
 		font-weight: bold;
-		border-radius: (4/16rem);
+		border-radius: var(--pillRadius);
 		overflow: hidden;
+		box-shadow: 0 (10/16rem) (24/16rem) rgba(214, 51, 108, 0.35);
 
-		// Transition Properties
-		color: var(--bodyTextColorWhite);
-		transition: color 0.3s;
-		transition-delay: 0.1s;
+		color: #fff;
+		transition: transform 0.25s, box-shadow 0.25s, background 0.3s;
 		text-align: center;
 
 		&:hover {
-			color: #fff;
-
-			&:before {
-				width: 100%;
-			}
-		}
-
-		&:before {
-			z-index: -1;
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: "";
-			opacity: 1;
-			display: block;
-			background-color: #000;
-			height: 100%;
-
-			//Transition properties
-			width: 0;
-			transition: width 0.3s;
+			transform: translateY(-0.125rem);
+			box-shadow: 0 (14/16rem) (28/16rem) rgba(214, 51, 108, 0.45);
+			background: linear-gradient(135deg, var(--secondary), var(--primary));
 		}
 	}
 
@@ -150,42 +138,25 @@ color: var(--bodyTextColor);
 		position: relative;
 		display: inline-block;
 		width: auto;
-		padding: (16/16rem) (32/16rem);
+		padding: (16/16rem) (38/16rem);
 		text-decoration: none;
 		text-transform: uppercase;
+		letter-spacing: 0.04em;
 		font-size: (16/16rem);
 		line-height: (16/16em);
 		font-weight: bold;
-		border: 2px solid #000;
+		border-radius: var(--pillRadius);
+		border: 2px solid var(--primary);
 
-		// Transition Properties
-		color: #000;
-		transition: color 0.3s;
-		transition-delay: 0.1s;
+		color: var(--primary);
+		background: transparent;
+		transition: color 0.3s, background-color 0.3s, transform 0.25s;
 		text-align: center;
 
 		&:hover {
 			color: #fff;
-
-			&:before {
-				width: 100%;
-			}
-		}
-
-		&:before {
-			z-index: -1;
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: "";
-			opacity: 1;
-			display: block;
-			background-color: #000;
-			height: 100%;
-
-			//Transition properties
-			width: 0;
-			transition: width 0.3s;
+			background-color: var(--primary);
+			transform: translateY(-0.125rem);
 		}
 	}
 
@@ -303,8 +274,9 @@ color: var(--bodyTextColor);
 		/* prevents padding and border from affecting height and width */
 		box-sizing: border-box;
 		padding: (12/16rem) (16/16rem);
-		background-color: #fff;
-		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		background-color: var(--cream);
+		box-shadow: rgba(43, 34, 34, 0.08) 0px 8px 24px;
+		border-bottom: (3/16rem) solid var(--secondary);
 		position: fixed;
 		z-index: 10000;
 
@@ -449,7 +421,7 @@ color: var(--bodyTextColor);
 
 		.cs-ul-wrapper {
 			height: 100vh;
-			background-color: #fff;
+			background-color: var(--cream);
 			box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
 			opacity: 0;
 			position: absolute;
@@ -521,30 +493,19 @@ color: var(--bodyTextColor);
 			/* 16px - 24px */
 			font-size: clamp(1rem, 2.5vw, 1.5rem);
 			line-height: 1.2em;
+			font-weight: 700;
 			text-decoration: none;
 			margin: 0;
-			padding: (4/16rem);
+			padding: (6/16rem) (16/16rem);
+			border-radius: var(--pillRadius);
 			color: var(--headerColor);
 			display: inline-block;
 			position: relative;
-
-			&:before {
-				/* active state underline */
-				content: "";
-				width: 100%;
-				height: 1px;
-				background: currentColor;
-				opacity: 1;
-				display: none;
-				position: absolute;
-				bottom: (-2/16rem);
-				left: 0;
-			}
+			transition: color 0.3s, background-color 0.3s;
 
 			&.cs-active {
-				&:before {
-					display: block;
-				}
+				color: #fff;
+				background-color: var(--primary);
 			}
 		}
 
@@ -801,9 +762,10 @@ color: var(--bodyTextColor);
 		width: 100%;
 		/* prevents padding and border from affecting height and width */
 		box-sizing: border-box;
-		padding: 0 (16/16rem);
-		background-color: #fff;
-		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		padding: (12/16rem) (16/16rem);
+		background-color: var(--cream);
+		box-shadow: rgba(43, 34, 34, 0.08) 0px 8px 24px;
+		border-bottom: (3/16rem) solid var(--secondary);
 		position: fixed;
 		z-index: 10000;
 
@@ -854,7 +816,7 @@ color: var(--bodyTextColor);
 
 		.cs-li {
 			list-style: none;
-			padding: (32/16rem) 0;
+			padding: (16/16rem) 0;
 			/* prevent flexbox from squishing it */
 			flex: none;
 		}
@@ -863,35 +825,27 @@ color: var(--bodyTextColor);
 			/* 14px - 16px */
 			font-size: clamp(0.875rem, 1vw, 1rem);
 			line-height: 1.5em;
+			font-weight: 700;
 			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 0.03em;
 			margin: 0;
+			padding: (8/16rem) (16/16rem);
+			border-radius: var(--pillRadius);
 			color: var(--bodyTextColor);
 			display: block;
 			position: relative;
+			transition: color 0.3s, background-color 0.3s;
+
 			&:hover {
-				&:before {
-					width: 100%;
-				}
+				color: var(--primary);
+				background-color: var(--secondaryLight, #f6d27a);
+				background-color: rgba(224, 165, 38, 0.18);
 			}
 
 			&.cs-active {
-				&:before {
-					width: 100%;
-				}
-			}
-
-			&:before {
-				/* active state underline */
-				content: "";
-				width: 0%;
-				height: 2px;
-				background: var(--primary);
-				opacity: 1;
-				display: block;
-				position: absolute;
-				bottom: (0/16rem);
-				left: 0;
-				transition: width 0.3s;
+				color: #fff;
+				background-color: var(--primary);
 			}
 		}
 	}
