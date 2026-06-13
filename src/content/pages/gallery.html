@@ -45,9 +45,9 @@ permalink: "/gallery/"
                 <li class="cs-item">
                     <picture class="cs-picture">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="{% getUrl imgPath | resize({ width: 480, height: 480 }) | avif %}" type="image/avif">
-                        <source media="(max-width: 600px)" srcset="{% getUrl imgPath | resize({ width: 480, height: 480 }) | webp %}" type="image/webp">
-                        <source media="(max-width: 600px)" srcset="{% getUrl imgPath | resize({ width: 480, height: 480 }) | jpeg %}" type="image/jpeg">
+                        <source media="(max-width: 600px)" srcset="{% getUrl imgPath | resize({ width: 360, height: 360 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl imgPath | resize({ width: 360, height: 360 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 600px)" srcset="{% getUrl imgPath | resize({ width: 360, height: 360 }) | jpeg %}" type="image/jpeg">
                         <!--Tablet/Desktop Image-->
                         <source media="(min-width: 601px)" srcset="{% getUrl imgPath | resize({ width: 640, height: 640 }) | avif %}" type="image/avif">
                         <source media="(min-width: 601px)" srcset="{% getUrl imgPath | resize({ width: 640, height: 640 }) | webp %}" type="image/webp">

@@ -1,6 +1,6 @@
 {
-  "name": "Starter Kit",
-  "short_name": "Starter Kit",
+  "name": "Emma's Party Rentals",
+  "short_name": "Emma's Party Rentals",
   "icons": [
     {
       "src": "/assets/favicons/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#fff8ec",
+  "background_color": "#fff8ec",
   "display": "standalone"
 }
