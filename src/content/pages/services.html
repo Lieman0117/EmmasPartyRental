@@ -101,6 +101,48 @@ permalink: "/services/"
         </div>
     </section>
 
+    <!-- ============================================ -->
+    <!--               Why Choose Us                  -->
+    <!-- ============================================ -->
+
+    <section id="services-features">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Why Choose Us</span>
+                <h2 class="cs-title">The {{ client.name }} Difference</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="" width="28" height="28" aria-hidden="true">
+                    </div>
+                    <h3 class="cs-h3">Family-Owned &amp; Friendly</h3>
+                    <p class="cs-item-text">
+                        We treat every event like it's our own, with personal service and attention to detail from start to finish.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="" width="28" height="28" aria-hidden="true">
+                    </div>
+                    <h3 class="cs-h3">Clean &amp; Well-Maintained</h3>
+                    <p class="cs-item-text">
+                        Our tents, tables, chairs, and games are inspected and cleaned before every rental so they look their best at your event.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="" width="28" height="28" aria-hidden="true">
+                    </div>
+                    <h3 class="cs-h3">Delivery &amp; Setup</h3>
+                    <p class="cs-item-text">
+                        {{ client.serviceArea }}, we can deliver, set up, and break down your rental so you can focus on enjoying the party.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
     {% include 'sections/cta.html' %}
 
 {% endblock %}

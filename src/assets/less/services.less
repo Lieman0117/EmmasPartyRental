@@ -114,3 +114,101 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---       Why Choose Us         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-features {
+        padding: var(--sectionPadding);
+        background-color: #fff;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            /* 32px - 40px */
+            gap: clamp(2rem, 4vw, 2.5rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-icon-wrapper {
+            width: (64/16rem);
+            height: (64/16rem);
+            flex: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primaryLight));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: (16/16rem);
+        }
+
+        .cs-icon {
+            width: (28/16rem);
+            height: (28/16rem);
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 (8/16rem);
+            color: var(--headerColor);
+        }
+
+        .cs-item-text {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            margin: 0;
+            max-width: (320/16rem);
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-features {
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .cs-item {
+            width: 31%;
+        }
+    }
+}
