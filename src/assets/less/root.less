@@ -857,11 +857,10 @@ color: var(--bodyTextColor);
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0px) {
-	#banner-310 {
-		/* 144px - 252px */
-		padding-top: clamp(9rem, 25vw, 15.75rem);
-		/* 80px - 140px */
-		padding-bottom: clamp(5rem, 13vw, 8.75rem);
+	#page-header {
+		/* clears the fixed nav, modest height since there's no background image */
+		padding: clamp(7rem, 20vw, 10rem) (16/16rem) clamp(2rem, 5vw, 3rem);
+		background-color: var(--cream);
 		position: relative;
 		z-index: 1;
 
@@ -883,7 +882,7 @@ color: var(--bodyTextColor);
 			text-align: center;
 			max-width: (700/16rem);
 			margin: 0 auto (12/16rem);
-			color: var(--bodyTextColorWhite);
+			color: var(--headerColor);
 			position: relative;
 		}
 
@@ -897,8 +896,9 @@ color: var(--bodyTextColor);
 			/* 14px - 16px */
 			font-size: clamp(0.875rem, 1.5vw, 1rem);
 			line-height: 1.2em;
+			font-weight: 700;
 			text-decoration: none;
-			color: var(--bodyTextColorWhite);
+			color: var(--bodyTextColor);
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -918,47 +918,14 @@ color: var(--bodyTextColor);
 				height: (12/16rem);
 				margin-left: (12/16rem);
 				margin-right: (12/16rem);
-				background: url("/assets/svgs/chevron.svg");
+				background: url("/assets/svgs/chevron-dark.svg");
 				background-size: contain;
 				background-position: center;
 				background-repeat: no-repeat;
 			}
 
 			&.cs-active {
-				color: var(--primaryLight);
-			}
-		}
-
-		.cs-background {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			z-index: -1;
-
-			&:before {
-				/* black overlay box */
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: #000;
-				opacity: 0.72;
-				position: absolute;
-				display: block;
-				top: 0;
-				left: 0;
-				z-index: 1;
-			}
-
-			img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
+				color: var(--primary);
 			}
 		}
 	}

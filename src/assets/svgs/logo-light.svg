@@ -1,5 +1,7 @@
-<svg width="300" height="40" viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Emma's Party Rentals logo">
-	<circle cx="16" cy="20" r="10" fill="#ff6fae"/>
-	<text x="34" y="28" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" font-style="italic" fill="#ff6fae">Emma's</text>
-	<text x="128" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#e0c171">PARTY RENTALS</text>
+<svg width="280" height="60" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Emma's Party Rentals logo">
+	<circle cx="24" cy="30" r="22" fill="#ff8fb6"/>
+	<circle cx="24" cy="30" r="15" fill="#3a1626"/>
+	<circle cx="24" cy="30" r="8" fill="#f6d27a"/>
+	<text x="56" y="32" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="bold" font-style="italic" fill="#ff8fb6">Emma's</text>
+	<text x="56" y="51" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#f6d27a">PARTY RENTALS</text>
 </svg>
