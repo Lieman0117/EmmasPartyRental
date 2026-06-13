@@ -1,0 +1,77 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// PAGE STYLES
+// Interior pages have their own stylesheet for styles that only exist on
+// that page. Any styles shared between pages, including repeated sections,
+// should go into root.less
+// ─────────────────────────────────────────────────────────────────────────────
+
+/*-- -------------------------- -->
+<---        Gallery Grid        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #gallery-grid {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            max-width: (650/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-image-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 8px - 16px */
+            gap: clamp(0.5rem, 2vw, 1rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+        }
+
+        .cs-picture {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            /* 4px - 8px */
+            border-radius: clamp(0.25rem, 1vw, 0.5rem);
+            overflow: hidden;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #gallery-grid {
+        .cs-image-group {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

@@ -7,18 +7,12 @@
         <!-- Logo Group -->
         <div class="cs-logo-group">
             <a aria-label="go back to home" class="cs-logo" href="/">
-                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/logo-light.svg" alt="logo" width="240" height="32">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/logo-light.svg" alt="logo" width="300" height="40">
             </a>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum tincidunt vitae velit dolor cras tellus nisl habitant. Consectetur pellentesque dignissim sed amet.
+                {{ client.name }} is a family-owned party rental business offering tents, tables, chairs, and yard games for every occasion. {{ client.serviceArea }}.
             </p>
             <div class="cs-social">
-                <a class="cs-social-link" aria-label="visit google profile" href="{{ client.address.mapLink }}" target="_blank" rel="noopener">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="google" width="11" height="11">
-                </a>
-                <a class="cs-social-link" aria-label="visit facebook profile" href="{{ client.socials.facebook }}" target="_blank" rel="noopener">
-                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/facebook.svg" alt="facebook" width="6" height="11">
-                </a>
                 <a class="cs-social-link" aria-label="visit instagram profile" href="{{ client.socials.instagram }}" target="_blank" rel="noopener">
                     <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/instagram.svg" alt="instagram" width="11" height="11">
                 </a>
@@ -33,47 +27,28 @@
                 <a class="cs-nav-link" href="/">Home</a>
             </li>
             <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/services/">Services</a>
+            </li>
+            <li class="cs-nav-li">
                 <a class="cs-nav-link" href="/about/">About</a>
             </li>
             <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/reviews/">Reviews</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/blog/">Blog</a>
+                <a class="cs-nav-link" href="/gallery/">Gallery</a>
             </li>
             <li class="cs-nav-li">
                 <a class="cs-nav-link" href="/contact/">Contact</a>
             </li>
         </ul>
-        <ul class="cs-nav">
-            <li class="cs-nav-li">
-                <span class="cs-header">Projects</span>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/project-one/">Project One</a>
-            </li>
-            <li class="cs-nav-li">
-                <a class="cs-nav-link" href="/project-two/">Project Two</a>
-            </li>
-        </ul>
         <!-- Contact Info -->
         <ul class="cs-contact">
             <li class="cs-nav-li">
-                <span class="cs-header">Contact</span>
+                <span class="cs-header">Get In Touch</span>
             </li>
             <li class="cs-contact-li">
-                <a class="cs-contact-link cs-address" href="{{ client.address.mapLink }}" target="_blank" rel="noopener">
-                    {{ client.address.lineOne }}, <br>
-                    {{ client.address.lineTwo }}, <br>
-                    {{ client.address.city }}, {{ client.address.state }}
-                    {{ client.address.zip }}
-                </a>
+                <span class="cs-address">{{ client.serviceArea }}</span>
             </li>
             <li class="cs-contact-li">
-                <a class="cs-contact-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
-            </li>
-            <li class="cs-contact-li">
-                <a class="cs-contact-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
+                <a class="cs-contact-link" href="{{ client.socials.instagram }}" target="_blank" rel="noopener">DM us on Instagram for a quote</a>
             </li>
         </ul>
     </div>

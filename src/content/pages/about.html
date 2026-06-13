@@ -1,6 +1,6 @@
 ---
-title: "About | Code Stitch Web Designs"
-description: "Meta description for the page"
+title: "About | {{ client.name }}"
+description: "Learn about Emma's Party Rentals, a family-owned party and event rental business serving Leesburg, Frederick, and the surrounding areas."
 permalink: "/about/"
 ---
 
@@ -40,7 +40,7 @@ permalink: "/about/"
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="Tables and chairs set up for an outdoor party" width="1920" height="482" loading="eager" decoding="async">
         </picture>
     </div>
 
@@ -65,7 +65,7 @@ permalink: "/about/"
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
+                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Tables and chairs set up for an outdoor party" width="522" height="581" decoding="async">
                 </picture>
                 <picture class="cs-picture cs-picture2">
                     <!--Mobile Image-->
@@ -80,24 +80,19 @@ permalink: "/about/"
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
+                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="Yard games set up at a backyard party" width="390" height="376" loading="lazy" decoding="async">
                 </picture>
             </div>
             <!-- Right Content Section-->
             <div class="cs-content">
                 <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About CodeStitch</h2>
+                <h2 class="cs-title">Our Story</h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    {{ client.name }} is a family-owned party and event rental business, {{ client.serviceArea }}. What started as a way to help friends and neighbors host memorable get-togethers has grown into a business dedicated to making party planning easy for our community.
                 </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
+                <p class="cs-text">
+                    We take pride in offering clean, well-maintained tents, tables, chairs, and yard games, plus the kind of friendly, personal service you'd expect from a family business. Whether you're planning a birthday party, graduation, wedding, or backyard cookout, we're here to help you create a space your guests will love.
+                </p>
                 <a href="/contact/" class="cs-button-solid">Get in Touch</a>
             </div>
         </div>

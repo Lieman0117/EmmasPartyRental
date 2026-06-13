@@ -1,6 +1,6 @@
 ---
-title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
-description: "Meta description for the page"
+title: "Emma's Party Rentals | Tents, Tables, Chairs & Yard Games"
+description: "Family-owned party and event rental company serving Leesburg, Frederick, and the surrounding areas with tents, tables, chairs, and yard games."
 permalink: "/"
 tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
 ---
@@ -21,10 +21,6 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css"/>
     {% endif %}
-
-    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
-    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
-    <!-- {% include "components/home-schema.html" %} -->
 {% endblock %}
 
 {% block body %}
@@ -35,14 +31,14 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
     <section id="hero-143">
         <div class="cs-container">
-            <span class="cs-topper">CodeStitch Presents</span>
+            <span class="cs-topper">{{ client.name }}</span>
             <h1 class="cs-title">
-                The Intermediate Website Kit (LESS)
+                {{ client.tagline }}
             </h1>
             <p class="cs-text">
-                Building faster websites, faster. Just clone, update _data/client.js, swap out some sections, and away you go!
+                {{ client.serviceArea }}. From elegant tents to tables, chairs, and fun yard games, we help make your next party, wedding, or gathering unforgettable.
             </p>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+            <a href="/contact/" class="cs-button-solid">Request a Quote</a>
         </div>
 
         <!-- Background Image -->
@@ -63,7 +59,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
             <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
             <source media="(min-width: 1300px)" srcset="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="kitchen" width="1" height="1" loading="eager" decoding="async">
+            <img src="{% getUrl "/assets/images/landing.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" alt="A white event tent set up for an outdoor party" width="1" height="1" loading="eager" decoding="async">
         </picture>
     </section>
 
@@ -75,46 +71,35 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <ul class="cs-card-group">
             <li class="cs-item">
                 <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="" width="52" height="52" aria-hidden="true">
                 </picture>
                 <h2 class="cs-title">
-                    Full Kitchen Remodel
+                    Tents
                 </h2>
                 <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Spacious, weather-ready tents to cover your guests and keep your event running smoothly, rain or shine.
                 </p>
             </li>
             <li class="cs-item">
                 <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="" width="52" height="52" aria-hidden="true">
                 </picture>
                 <h2 class="cs-title">
-                    Exterior Repairs
+                    Tables &amp; Chairs
                 </h2>
                 <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Comfortable seating and sturdy tables for every guest count, perfect for dinners, receptions, and parties.
                 </p>
             </li>
             <li class="cs-item">
                 <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="icon" width="52" height="52" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="" width="52" height="52" aria-hidden="true">
                 </picture>
                 <h2 class="cs-title">
-                    Utility Maintenance
+                    Yard Games
                 </h2>
                 <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-icon">
-                    <img loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="icon" width="52" height="52" aria-hidden="true">
-                </picture>
-                <h2 class="cs-title">
-                    Design Consultation
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fun lawn games to keep guests of all ages entertained throughout your celebration.
                 </p>
             </li>
         </ul>
@@ -141,7 +126,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
+                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Tables and chairs set up for an outdoor celebration" width="522" height="581" loading="lazy" decoding="async">
                 </picture>
                 <picture class="cs-picture cs-picture2">
                     <!--Mobile Image-->
@@ -156,26 +141,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
                     <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
+                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="Yard games set up at a backyard party" width="390" height="376" loading="lazy" decoding="async">
                 </picture>
             </div>
             <!-- Right Content Section-->
             <div class="cs-content">
                 <span class="cs-topper">About Us</span>
                 <h2 class="cs-title">
-                    About Stitch Law
+                    A Family Business Built on Making Parties Easy
                 </h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    {{ client.name }} is a family-owned rental company dedicated to taking the stress out of party planning. {{ client.serviceArea }}, we provide quality tents, tables, chairs, and yard games so you can focus on enjoying your event with the people you love.
                 </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
                 <a href="/about/" class="cs-button-solid">About Us</a>
             </div>
         </div>
@@ -191,51 +168,51 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <div class="cs-image-group">
                 <picture class="cs-picture cs-picture1">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" loading="lazy" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/services-yard-games.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="Lawn games set up for guests to enjoy" width="522" height="581" loading="lazy" decoding="async">
                 </picture>
                 <picture class="cs-picture cs-picture2">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/services-tables.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="Tables and chairs ready for an event" width="390" height="376" loading="lazy" decoding="async">
                 </picture>
             </div>
             <!-- Right Content Section-->
             <div class="cs-content">
-                <span class="cs-topper">About Us</span>
+                <span class="cs-topper">Why Choose Us</span>
                 <h2 class="cs-title">
-                    About Stitch Law
+                    Making Party Planning Easy
                 </h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    We know planning a party can be stressful, so we make renting simple. Whether you're hosting a birthday, graduation, wedding, or backyard get-together, we have everything you need to set the scene.
                 </p>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    Our tents, tables, and chairs are clean, well-maintained, and ready to go, and our yard games add a fun touch that guests of all ages will enjoy.
                 </p>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    Ready to get started? Reach out and we'll help you put together the perfect setup for your event.
                 </p>
-                <a href="/about/" class="cs-button-solid">About Us</a>
+                <a href="/services/" class="cs-button-solid">Our Services</a>
             </div>
         </div>
     </section>
@@ -247,9 +224,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <section id="gallery-48">
         <div class="cs-container">
             <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
+                <span class="cs-topper">Our Gallery</span>
                 <h2 class="cs-title">
-                    Et orci volutpat, back up generator installations
+                    A Look at Our Setups
                 </h2>
             </div>
             <div class="cs-image-group">
@@ -268,7 +245,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | jpeg %}" alt="new hallway" width="413" height="567" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port1.jpg" | resize({ width: 826, height: 1134 }) | jpeg %}" alt="Tent setup for an outdoor event" width="413" height="567" loading="lazy" decoding="async">
                     </picture>
                     <picture class="cs-picture cs-picture-2">
                         <!--Mobile Image-->
@@ -283,7 +260,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="new home construction" width="413" height="629" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port4.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="Tables and chairs arranged for a party" width="413" height="629" loading="lazy" decoding="async">
                     </picture>
                     <picture class="cs-picture cs-picture-3">
                         <!--Mobile Image-->
@@ -298,7 +275,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | jpeg %}" alt="building a new wall" width="413" height="512" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port7.jpg" | resize({ width: 826, height: 1024 }) | jpeg %}" alt="Yard game setup at a backyard party" width="413" height="512" loading="lazy" decoding="async">
                     </picture>
                     <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                 </div>
@@ -317,7 +294,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | jpeg %}" alt="new kitchen" width="413" height="492" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port2.jpg" | resize({ width: 826, height: 984 }) | jpeg %}" alt="Outdoor tent and seating setup" width="413" height="492" loading="lazy" decoding="async">
                     </picture>
                     <picture class="cs-picture cs-picture-2">
                         <!--Mobile Image-->
@@ -332,7 +309,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | jpeg %}" alt="apartment addition" width="413" height="517" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port5.jpg" | resize({ width: 826, height: 1034 }) | jpeg %}" alt="Backyard celebration with rental furniture" width="413" height="517" loading="lazy" decoding="async">
                     </picture>
 
                     <picture class="cs-picture cs-picture-3">
@@ -348,7 +325,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="kew kitchen cabinets" width="413" height="629" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port8.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="Party tent with table settings" width="413" height="629" loading="lazy" decoding="async">
                     </picture>
 
                     <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
@@ -368,7 +345,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | jpeg %}" alt="new black window structure" width="413" height="625" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port3.jpg" | resize({ width: 826, height: 1250 }) | jpeg %}" alt="Tent and lighting setup for an evening event" width="413" height="625" loading="lazy" decoding="async">
                     </picture>
                     <picture class="cs-picture cs-picture-2">
                         <!--Mobile Image-->
@@ -383,7 +360,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | jpeg %}" alt="kitchen rebovation" width="413" height="452" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port6.jpg" | resize({ width: 826, height: 904 }) | jpeg %}" alt="Yard games and seating arrangement" width="413" height="452" loading="lazy" decoding="async">
                     </picture>
 
                     <picture class="cs-picture cs-picture-3">
@@ -399,62 +376,13 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | avif %}" type="image/avif">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | webp %}" type="image/webp">
                         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" type="image/jpeg">
-                        <img src="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="bathroom renovation" width="413" height="629" loading="lazy" decoding="async">
+                        <img src="{% getUrl "/assets/images/portfolio/port9.jpg" | resize({ width: 826, height: 1258 }) | jpeg %}" alt="Festive table setting at an outdoor party" width="413" height="629" loading="lazy" decoding="async">
                     </picture>
 
                     <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                 </div>
             </div>
-            <a href="/project-one/" class="cs-button-solid">View a Project</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews-67">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Reviews</span>
-                <h2 class="cs-title">
-                    Words From Our Customers
-                </h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-            </ul>
-            <a href="/reviews/" class="cs-button-solid">Read All Reviews</a>
+            <a href="/gallery/" class="cs-button-solid">View Our Gallery</a>
         </div>
     </section>
 
