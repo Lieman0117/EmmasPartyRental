@@ -859,8 +859,9 @@ color: var(--bodyTextColor);
 @media only screen and (min-width: 0px) {
 	#page-header {
 		/* clears the fixed nav, modest height since there's no background image */
-		padding: clamp(7rem, 20vw, 10rem) (16/16rem) clamp(2rem, 5vw, 3rem);
-		background-color: var(--cream);
+		padding: clamp(6.5rem, 18vw, 9rem) (16/16rem) clamp(1.5rem, 3vw, 2rem);
+		background: linear-gradient(135deg, rgba(214, 51, 108, 0.08), rgba(224, 165, 38, 0.08));
+		border-bottom: (3/16rem) solid var(--secondaryLight);
 		position: relative;
 		z-index: 1;
 
@@ -940,6 +941,32 @@ color: var(--bodyTextColor);
 	#cta-51 {
 		padding: var(--sectionPadding);
 		position: relative;
+		overflow: hidden;
+		background: linear-gradient(135deg, var(--primary), var(--primaryLight));
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0.12);
+			z-index: 0;
+		}
+
+		&:before {
+			width: (320/16rem);
+			height: (320/16rem);
+			top: (-120/16rem);
+			right: (-100/16rem);
+		}
+
+		&:after {
+			width: (220/16rem);
+			height: (220/16rem);
+			bottom: (-100/16rem);
+			left: (-80/16rem);
+		}
 
 		.cs-container {
 			width: 100%;
@@ -948,6 +975,8 @@ color: var(--bodyTextColor);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			position: relative;
+			z-index: 1;
 			/* 48px - 64px */
 			gap: clamp(3rem, 6vw, 4rem);
 		}
@@ -962,6 +991,10 @@ color: var(--bodyTextColor);
 			align-items: center;
 		}
 
+		.cs-topper {
+			color: var(--secondaryLight);
+		}
+
 		.cs-title {
 			color: var(--bodyTextColorWhite);
 		}
@@ -969,43 +1002,19 @@ color: var(--bodyTextColor);
 		.cs-text {
 			margin-bottom: (16/16rem);
 			color: var(--bodyTextColorWhite);
-			opacity: 0.8;
+			opacity: 0.9;
 			&:last-of-type {
 				margin-bottom: (32/16rem);
 			}
 		}
 
-		.cs-picture {
-			height: 100%;
-			width: 100%;
-			display: block;
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			z-index: -1;
+		.cs-button-solid {
+			background: var(--cream);
+			color: var(--primary);
 
-			&:before {
-				/* black color overlay */
-				content: "";
-				position: absolute;
-				display: block;
-				height: 100%;
-				width: 100%;
-				background: #000;
-				opacity: 0.8;
-				top: 0;
-				left: 0;
-				z-index: 1;
-			}
-
-			img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
+			&:hover {
+				background: var(--secondaryLight);
+				color: var(--headerColor);
 			}
 		}
 	}
@@ -1186,6 +1195,8 @@ color: var(--bodyTextColor);
 		.cs-address {
 			font-size: (16/16rem);
 			margin-bottom: (20/16rem);
+			color: var(--bodyTextColorWhite);
+			opacity: 0.8;
 		}
 	}
 }
