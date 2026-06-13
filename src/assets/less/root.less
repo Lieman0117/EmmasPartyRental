@@ -1052,7 +1052,7 @@ color: var(--bodyTextColor);
 @media only screen and (min-width: 0px) {
 	#cs-footer-275 {
 		padding: var(--sectionPadding);
-		background-color: #1a1a1a;
+		background-color: #3a1626;
 
 		.cs-container {
 			width: 100%;
@@ -1103,9 +1103,10 @@ color: var(--bodyTextColor);
 		}
 
 		.cs-social-link {
-			width: (24/16rem);
-			height: (24/16rem);
-			background-color: #4e4b66;
+			/* 48px touch target */
+			width: (48/16rem);
+			height: (48/16rem);
+			background-color: var(--primary);
 			border-radius: 50%;
 			display: flex;
 			justify-content: center;
@@ -1115,13 +1116,13 @@ color: var(--bodyTextColor);
 			transition: transform 0.3s, background-color 0.3s;
 
 			&:hover {
-				background-color: #1a1a1a;
+				background-color: var(--secondary);
 				transform: translateY(-0.1875rem);
 			}
 		}
 
 		.cs-social-img {
-			height: (13/16rem);
+			height: (18/16rem);
 			width: auto;
 			display: block;
 		}

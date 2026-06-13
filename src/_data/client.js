@@ -4,6 +4,7 @@ module.exports = {
     serviceArea: "Serving Leesburg & Frederick and surrounding areas",
     socials: {
         instagram: "https://www.instagram.com/emmas_partyrentals/",
+        facebook: "https://www.facebook.com/profile.php?id=61576791475267",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://www.example.com",
